@@ -133,7 +133,18 @@ public class SistemaSolare {
      */
     public boolean rimuovi(Pianeta p) {
         
-        return false;
+        boolean verifica = false;
+        
+        for (int i = pianeti.size()-1; i>=0; i--) {
+
+            if (p.getNome() == pianeti.get(i).getNome())
+            {
+                verifica = true;
+                pianeti.remove(i);
+            }
+        }
+
+        return verifica;
     }
     
     /**
